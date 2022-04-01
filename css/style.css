@@ -1,0 +1,163 @@
+/**
+ * projekt: Webdokumentar
+ **/
+
+ /* Google fonts */
+ /*Fredericka the great*/
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inter&display=swap');
+
+
+ /* Variabler*/
+ :root {
+   /* farver */
+   --white: #fcfcfc;
+   --offwhite: #FFFEF2;
+   --beige: #ece2d7;
+   --green: #286328;
+   --pink: #F4D1E4;
+   --black: #1d0b09;
+
+   --color-primary: #6cac58;
+   --color-secondary: #50923e;
+   --color-tertiary: #427f37;
+   --color-quaternary: #316e32;
+   --color-quinary: #296331;
+
+   /* fonte */
+   --overskrift: 'Fredericka the Great', sans-serif; /* overskrifter */
+
+   /* whitespace */
+   --whitespace: .5rem;
+
+   /* teksturer ("skitse baggrund") */
+   --baggrund: url('../images/baggrund.png');
+ }
+
+ /* Smooth scroll */
+ html {
+   scroll-behavior: smooth;
+ }
+
+
+  /* Typography */
+  h1 {
+    font-family: var(--overskrift);
+    color: var(--black);
+    margin-top: var(--whitespace);
+    margin-bottom: var(--whitespace);
+  }
+
+  *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* baggrund*/
+body {
+  background-image: var(--baggrund);
+  min-height: 100vh;
+  font-family: Fredericka the Great, sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Mød kat text animation */
+.content {
+  display: end;
+  align-content: center;
+  justify-content: center;
+  padding-top: -100px;
+}
+
+.text_shadows {
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: calc(2rem + 5vw);
+  text-align: end;
+  margin: 0;
+  color: var(--color-primary);
+  //color: transparent;
+  //background-color: white;
+  //background-clip: text;
+  animation: shadows 2.2s ease-in infinite, move 3.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+/*hvis modsat + - vil teksten kører i cirkler*/
+@keyframes move {
+  0% {
+    transform: translate(300px, 70px);
+  }
+  40% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, 0px);
+  }
+  60% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+ /* Logo*/
+ .logo{
+   padding-left: 1000px;
+ }
